@@ -11,10 +11,10 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class GameRoulette implements GameInterface {
-    //    public static void main(String[] args) {
-//        GameRoulette game = new GameRoulette();
-//        game.run();
-//    }
+        public static void main(String[] args) {
+        GameRoulette game = new GameRoulette();
+        game.run();
+    }
     Scanner console = new Scanner(System.in);
     Random rand = new Random();
     PlayerRoulette player;
@@ -114,7 +114,7 @@ public class GameRoulette implements GameInterface {
                 "The maximum amount you can bet is $" + bank + ".\n" +
                 " How much would you like to bet?");
         int bet = console.nextInt();
-        if (bet > player.getAccount().getBalance()) {
+        if (bet > bank) {
             System.out.println("You cannot bet more than $" + bank + ".");
             System.out.println("How much would you like to bet?");
             bet = console.nextInt();
